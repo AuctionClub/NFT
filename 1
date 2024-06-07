@@ -1,0 +1,28 @@
+forge create --rpc-url devtestnet src/Vote.sol:Voting --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
+
+forge create --rpc-url 127.0.0.1:8545 src/mint.sol:FakeEfrogsNFT --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80  --constructor-args "FakeEfrogsNFT" "FEFROGS"
+
+cast send 0x8a791620dd6260079bf849dc5567adc3f2fdc318 "batchMint(address,string[])" 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 ["http://baidu.com/1.jpg","http://baidu.com/2.jpg"] --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
+cast send 0x8a791620dd6260079bf849dc5567adc3f2fdc318 "totalSupply()" --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
+cast call 0x8a791620dd6260079bf849dc5567adc3f2fdc318 "totalSupply()" --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --to-dec
+
+
+
+cast call $FakeEfrogsNFT "totalSupply()" 0x8a791620dd6260079bf849dc5567adc3f2fdc318 --rpc-url 127.0.0.1:8545
+
+
+
+forge create --rpc-url linea-testnet src/DutchAuction.sol:DutchAuction --private-key $PRIVATE_KEY
+forge create --rpc-url linea-testnet src/DutchAuction.sol:DutchAuction --private-key $PRIVATE_KEY
+
+
+
+forge create --rpc-url devtestnet src/DutchAuction.sol:DutchAuction --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --constructor-args "1000,2,0xContractAddress,123"
+
+
+cast call $Voting "createPoll()" 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 --rpc-url=devtestnet
+
+cast send 0x5b73c5498c1e3b4dba84de0f1833c4a029d90519 "createPoll(string,string)" "test1:投票1" "http://baidu.com/1.jpg" --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
+
+cast send 0x5b73c5498c1e3b4dba84de0f1833c4a029d90519 "vote(uint256,bool)" "test1:投票1" "http://baidu.com/1.jpg" --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
+cast send 0x5b73c5498c1e3b4dba84de0f1833c4a029d90519 "getPollResults(uint256)" 0 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 
