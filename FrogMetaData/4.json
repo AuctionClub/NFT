@@ -1,0 +1,28 @@
+{
+  "name": "Fake Ethereum Frogs#4",
+  "description": "Fake Ethereum Frogs",
+  "image": "https://i.nfte.ai/ia/m901/49940/5388364586727867538_380367289.avif",
+  "attributes": [
+  {
+    "trait_type": "Background",
+    "value": "Red"
+  },
+  {
+    "trait_type": "Eyes",
+    "value": "Purple"
+  },
+  {
+    "trait_type": "Hat",
+    "value": "Fedora"
+  },
+  {
+    "trait_type": "Body",
+    "value": "Camouflage"
+  },
+  {
+    "trait_type": "Mouth",
+    "value": "Laughing"
+  }
+]
+
+}

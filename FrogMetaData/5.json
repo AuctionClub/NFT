@@ -1,0 +1,27 @@
+{
+    "name": "Fake Ethereum Frogs#5",
+    "description": "Fake Ethereum Frogs",
+    "image": "https://i.nfte.ai/ia/m901/49940/848736162338323639_2050588642.avif",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Orange"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Brown"
+        },
+        {
+            "trait_type": "Hat",
+            "value": "Viking Helmet"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Gradient"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "Surprised"
+        }
+    ]
+}
